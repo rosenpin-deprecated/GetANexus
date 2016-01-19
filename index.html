@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GetANexus</title>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="styles/animate.css">
+</head>
+<body ng-app="Landing" ng-controller="MainController" layout="column" layout-align="start center">
+<div layout="column" layout-align="center center" flex="100">
+    <h2 align="center">Choose the option you feel the most fitting for you</h2>
+    <br><br><br>
+    <div ng-repeat="answer in current_answers" style="width: 100%;" >
+        <answer ng-click="changeCurrent()" style="width: 100%;" val="answer"></answer>
+    </div>
+</div>
+
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+<script src="scripts/app.js"></script>
+<script src="directives/answer.js"></script>
+</body>
+</html>
