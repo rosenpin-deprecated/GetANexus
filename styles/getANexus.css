@@ -1,0 +1,9 @@
+body{
+    max-height: 100vh;
+}
+.image{
+    height: 80vh;
+}
+.nexus{
+    color: red;
+}

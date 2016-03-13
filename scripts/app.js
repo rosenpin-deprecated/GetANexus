@@ -35,8 +35,13 @@ app.controller('MainController', function ($scope, $rootScope, $http, $mdMedia) 
     $scope.current = 0;
     $scope.changeCurrent = function () {
         $scope.current++;
-        if($scope.current>=$scope.allAnswers.length){
-            open("GetANexus.html")
+        if ($scope.current >= $scope.allAnswers.length) {
+            if ($scope.samshit) {
+                open("Samshit.html")
+            }
+            else {
+                open("GetANexus.html")
+            }
         }
         else {
             $scope.current_answers = $scope.current_answers = $scope.allAnswers[$scope.current];
@@ -44,4 +49,12 @@ app.controller('MainController', function ($scope, $rootScope, $http, $mdMedia) 
     };
     $scope.url = "https://www.google.com/nexus/";
     $scope.imgURL = "";
+
+    document.addEventListener('keydown', function (event) {
+        if (event.keyCode == 83) {
+            $scope.samshit = true
+        }
+    });
+
+
 });
